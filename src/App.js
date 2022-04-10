@@ -1,4 +1,6 @@
 import "./App.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRotate } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   return (
@@ -35,7 +37,9 @@ function App() {
         </div>
 
         {/* reload */}
-        <div className="reload"></div>
+        <div className="reload">
+          <FontAwesomeIcon icon={faRotate} className="icon" />
+        </div>
       </div>
     </div>
   );
