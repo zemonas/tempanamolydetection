@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRotate } from "@fortawesome/free-solid-svg-icons";
 import Temp from "./Components/Temp/Temp";
 import { useState, useEffect } from "react";
+import Humidity from "./Components/Humidity/Humidity";
 function App() {
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -15,6 +16,9 @@ function App() {
     const data = await response.json();
     setData(data);
     console.log(data);
+  };
+  const handleUpdate = () => {
+    fetchData();
   };
   return (
     <div className="App">
@@ -42,11 +46,16 @@ function App() {
         </div>
         {/* humidity echart */}
         <div className="echart">
-          <Temp data={data} />
+          <Humidity data={data} />
         </div>
 
         {/* reload */}
-        <div className="reload">
+        <div
+          className="reload"
+          onClick={() => {
+            handleUpdate();
+          }}
+        >
           <FontAwesomeIcon icon={faRotate} className="icon" />
         </div>
       </div>
