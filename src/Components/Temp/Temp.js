@@ -1,5 +1,5 @@
 import React from "react";
-import moment from "moment";
+
 import ReactECharts from "echarts-for-react";
 
 export default function Temp({ data }) {
