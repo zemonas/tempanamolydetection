@@ -1,9 +1,9 @@
 import "./App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRotate } from "@fortawesome/free-solid-svg-icons";
-import Temp from "./Components/Temp/Temp";
+import Temp from "./components/Temp/Temp";
 import { useState, useEffect } from "react";
-import Humidity from "./Components/Humidity/Humidity";
+import Humidity from "./components/Humidity/Humidity";
 function App() {
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -30,12 +30,12 @@ function App() {
         <div className="temp-humidity">
           {/* temp box */}
           <div className="temp-container">
-            <h3>{25.8} ˚C</h3>
+            <h3>{data[0].Temperature} ˚C</h3>
           </div>
           {/* humidity box  */}
           <div className="Humidity-container">
             <h3>
-              {39} H<sub>A</sub>
+              {data[0].Humidity} H<sub>A</sub>
             </h3>
           </div>
         </div>
