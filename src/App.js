@@ -1,9 +1,9 @@
 import "./App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRotate } from "@fortawesome/free-solid-svg-icons";
-import Temp from "./components/Temp/Temp";
+import Temp from "./Components/Temp/Temp";
 import { useState, useEffect } from "react";
-import Humidity from "./components/Humidity/Humidity";
+import Humidity from "./Components/Humidity/Humidity";
 function App() {
   const [data, setData] = useState([]);
   useEffect(() => {
